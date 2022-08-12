@@ -152,7 +152,7 @@ spec:
       serviceAccountName: kilo-peer-validation
       initContainers:
       - name: create
-        image: k8s.gcr.io/ingress-nginx/kube-webhook-certgen:v1.0
+        image: k8s.gcr.io/ingress-nginx/kube-webhook-certgen:v1.5.2
         args:
         - create
         - --namespace=kilo
@@ -162,7 +162,7 @@ spec:
         - --cert-name=tls.crt
       containers:
       - name: patch
-        image: k8s.gcr.io/ingress-nginx/kube-webhook-certgen:v1.0
+        image: k8s.gcr.io/ingress-nginx/kube-webhook-certgen:v1.5.2
         args:
         - patch
         - --webhook-name=peers.kilo.squat.ai
